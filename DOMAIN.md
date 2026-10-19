@@ -1,32 +1,38 @@
-# Как запустить сайт на qsissow.com
+# Как запустить сайт
 
-Сайт уже собран под этот адрес, файл `CNAME` с `qsissow.com` лежит в репозитории. Осталось 4 шага, все делаешь ты: покупка и аккаунты — только твои.
+## Сейчас: бесплатно на https://qsissow.github.io
 
-## 1. Купить домен qsissow.com (≈ $10–15 в год)
-Проверено 20.10.2026: домен свободен.
+Сайт уже собран под этот адрес. Имя `qsissow` на GitHub свободно (проверено 20.10.2026).
 
-Без банковской карты, за криптовалюту:
-- **NameSilo** (namesilo.com): давно на рынке, принимает криптовалюту.
-- **NiceNIC** (nicenic.com): принимает USDT.
+### Шаг 1. Создать бесплатную организацию qsissow (2 минуты)
+1. Открой https://github.com/account/organizations/new?plan=free
+2. Organization name: **qsissow**
+3. Contact email: твоя почта
+4. «This organization belongs to»: **My personal account**
+5. Нажми **Next**, приглашать участников не нужно (**Skip this step** / **Complete setup**).
 
-Перед оплатой проверь на странице оформления: точную цену первого года, **цену продления** (она бывает выше) и что включена бесплатная защита данных владельца (WHOIS privacy).
+### Шаг 2. Создать в ней репозиторий
+1. Открой https://github.com/organizations/qsissow/repositories/new
+2. Repository name: **qsissow.github.io** (именно так, с точками)
+3. **Public**
+4. Ничего не добавлять: без README, без .gitignore, без лицензии.
+5. **Create repository**
 
-## 2. Создать репозиторий на GitHub
-github.com → «+» → **New repository**:
-- Name: `qsissow-site` (имя может быть любым)
-- **Public**
-- **Ничего не добавлять**: без README, без .gitignore, без лицензии.
+### Шаг 3. Написать мне
+Я отправлю сайт в этот репозиторий. Репозиторий с таким именем GitHub публикует автоматически: через 1–2 минуты сайт откроется на **https://qsissow.github.io**.
 
-Напиши мне, когда создашь, и я отправлю туда сайт.
+Если сайт не появился: репозиторий → **Settings** → **Pages** → Source: **Deploy from a branch**, Branch: **main**, папка **/ (root)** → **Save**.
 
-## 3. Включить GitHub Pages (после того как я отправлю сайт)
-Репозиторий → **Settings** → **Pages**:
-- Source: **Deploy from a branch**, Branch: **main**, папка **/ (root)** → Save
-- Custom domain: `qsissow.com` → Save
-- Когда появится галочка, включи **Enforce HTTPS**
+---
 
-## 4. Прописать DNS у регистратора домена
-В панели регистратора открой DNS-записи для qsissow.com и добавь:
+## Потом: свой домен qsissow.com (когда появятся деньги)
+
+Цены на 20.10.2026: **NiceNIC** $14.99 за первый год и $16.99 за продление, оплата USDT; **NameSilo** $17.29 в год.
+
+1. Купить `qsissow.com`.
+2. Сказать мне: я верну в репозиторий файл `CNAME` и пересоберу сайт под новый адрес (одна команда).
+3. Репозиторий → **Settings** → **Pages** → Custom domain: `qsissow.com` → Save, потом включить **Enforce HTTPS**.
+4. В панели регистратора добавить DNS-записи (старые A-записи «парковки» удалить):
 
 | Тип | Имя (Host) | Значение |
 |---|---|---|
@@ -34,15 +40,13 @@ github.com → «+» → **New repository**:
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| CNAME | www | timonparpiev-code.github.io |
+| CNAME | www | qsissow.github.io |
 
-Старые A-записи «парковки» от регистратора удали.
+Через 10 минут – сутки сайт откроется на https://qsissow.com, а старый адрес qsissow.github.io будет сам перенаправлять туда.
 
-После этого подожди от 10 минут до суток: сайт откроется на https://qsissow.com, а www.qsissow.com будет перенаправлять туда же.
-
-## Как обновлять сайт потом
-Правки делаются в `ночная-смена/site/index.html`, потом:
+## Как обновлять сайт
+Правки делаются в `ночная-смена/site/index.html`, затем:
 ```bash
-python tools/build_site.py . https://qsissow.com
+python tools/build_site.py . https://qsissow.github.io
 ```
-и коммит + `git push` в папке `ksisov-site`. Перед пересборкой файл `CNAME` сохраняется: скрипт его не трогает.
+и в папке `ksisov-site`: коммит + `git push`.

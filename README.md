@@ -2,6 +2,6 @@
 
 Сайт студии Ксисов: Telegram-боты и сайты для бизнеса в Ташкенте.
 
-Адрес: https://qsissow.com (GitHub Pages + свой домен, файл CNAME)
+Адрес: https://qsissow.github.io (бесплатно, GitHub Pages)
 
 Собран из `ночная-смена/site/index.html` скриптом сборки. Чтобы обновить сайт: пересобрать, закоммитить, `git push`.
