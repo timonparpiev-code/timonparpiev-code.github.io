@@ -1,6 +1,6 @@
 # ksisov — сайт
 
-Сайт студии Ксисов: Telegram-боты и сайты для бизнеса в Ташкенте.
+Сайт студии Qsissow: Telegram-боты и сайты для бизнеса в Ташкенте.
 
 Адрес: https://timonparpiev-code.github.io
 
