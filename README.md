@@ -2,6 +2,6 @@
 
 Сайт студии Ксисов: Telegram-боты и сайты для бизнеса в Ташкенте.
 
-Адрес: https://timonparpiev-code.github.io (бесплатно, GitHub Pages)
+Адрес: https://timonparpiev-code.github.io
 
 Собран из `ночная-смена/site/index.html` скриптом сборки. Чтобы обновить сайт: пересобрать, закоммитить, `git push`.
