@@ -265,6 +265,19 @@ section{padding-block:clamp(72px,10vw,140px);border-top:1px solid var(--line)}
   .extras-line div:last-child{border-bottom:0}
 }
 
+
+/* ===== КП ===== */
+.kp-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.kp-card{display:grid;gap:10px;align-content:start;padding:22px 20px;border:1px solid var(--line);border-radius:16px;background:var(--surface);text-decoration:none;color:var(--text);transition:border-color .25s,transform .25s}
+.kp-card:hover{border-color:var(--green);transform:translateY(-4px)}
+.kp-card h3{font-size:19px}
+.kp-card p{color:var(--muted);font-size:14.5px}
+.kp-tag{font:500 11.5px var(--mono);color:var(--green)}
+.kp-go{font-weight:600;color:var(--ink);margin-top:4px}
+.kp-card:hover .kp-go{color:var(--green)}
+@media (max-width:1100px){.kp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:700px){.kp-grid{grid-template-columns:minmax(0,1fr)}}
+
 /* ===== ниши: вкладки ===== */
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px}
 .tabs button{font:600 15px/1 var(--f);color:var(--muted);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:12px 18px;cursor:pointer;transition:all .2s}
@@ -422,7 +435,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header class="band">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Qsissow, bosh sahifa"><img src="img-1.png" alt="Qsissow" height="40"></a>
-    <nav aria-label="Bo'limlar"><a href="#price">Xizmatlar</a><a href="#who">Sohalar</a><a href="#calc">Kalkulyator</a><a href="#work">Ishlar</a><a href="#faq">Savollar</a></nav>
+    <nav aria-label="Bo'limlar"><a href="#price">Xizmatlar</a><a href="#who">Sohalar</a><a href="#kp">TT</a><a href="#calc">Kalkulyator</a><a href="#work">Ishlar</a><a href="#faq">Savollar</a></nav>
     <div class="bar-right"><a class="lang" href="index.html" hreflang="ru" title="Русский">RU</a>
       <a class="handle" href="https://t.me/qsissow" target="_blank" rel="noopener">@qsissow</a>
       <a class="btn" href="#contact">Muhokama <span class="arr">→</span></a>
@@ -575,6 +588,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band" id="kp">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="tagline">/ tijorat takliflari</span><h2 class="reveal">Sohangiz uchun tayyor tijorat taklifi</h2></div>
+      <p class="lead reveal">Bitta sahifa: hozir nima xalaqit beradi, bot nima qiladi, narx va muddat. Oching, «PDF yuklab olish»ni bosing va hamkor yoki rahbarga ko'rsating.</p>
+    </div>
+    <div class="kp-grid"><a class="kp-card reveal" href="https://timonparpiev-code.github.io/kp/salon-uz.html" target="_blank" rel="noopener"><span class="kp-tag">PDF · A4</span><h3>Go'zallik saloni</h3><p>Onlayn yozilish, eslatmalar, ustalar jadvali</p><span class="kp-go">Taklifni ochish →</span></a><a class="kp-card reveal" href="https://timonparpiev-code.github.io/kp/barber-uz.html" target="_blank" rel="noopener"><span class="kp-tag">PDF · A4</span><h3>Barbershop</h3><p>Barberga 4 bosishda yozilish, bo'sh kreslolar kamroq</p><span class="kp-go">Taklifni ochish →</span></a><a class="kp-card reveal" href="https://timonparpiev-code.github.io/kp/dent-uz.html" target="_blank" rel="noopener"><span class="kp-tag">PDF · A4</span><h3>Stomatologiya</h3><p>Shifokorga yozilish, qabul va ko'rik haqida eslatmalar</p><span class="kp-go">Taklifni ochish →</span></a><a class="kp-card reveal" href="https://timonparpiev-code.github.io/kp/auto-uz.html" target="_blank" rel="noopener"><span class="kp-tag">PDF · A4</span><h3>Avtoservis va moyka</h3><p>Vaqtga yozilish, avto toifasi bo'yicha narx</p><span class="kp-go">Taklifni ochish →</span></a><a class="kp-card reveal" href="https://timonparpiev-code.github.io/kp/food-uz.html" target="_blank" rel="noopener"><span class="kp-tag">PDF · A4</span><h3>Kafe va yetkazib berish</h3><p>Menyu, savat, oshxonaga buyurtmalar, holatlar</p><span class="kp-go">Taklifni ochish →</span></a></div>
   </div>
 </section>
 
