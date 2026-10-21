@@ -1,7 +1,3 @@
-# ksisov — сайт
+# Переехал
 
-Сайт студии Qsissow: Telegram-боты и сайты для бизнеса в Ташкенте.
-
-Адрес: https://timonparpiev-code.github.io
-
-Собран из `ночная-смена/site/index.html` скриптом сборки. Чтобы обновить сайт: пересобрать, закоммитить, `git push`.
+Сайт Qsissow теперь здесь: https://qsissow.github.io
